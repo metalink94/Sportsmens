@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sportsmens</string>
+    <string name="app_name">1xbet - players info</string>
 
     <string name="default_notification_channel_id">fcm_default_channel</string>
     <string name="url">https://bet4ra.com/go.php?id=572</string>
