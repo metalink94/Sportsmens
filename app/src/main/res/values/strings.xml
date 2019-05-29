@@ -7,41 +7,38 @@
     <string name="key_first">url</string>
     <string name="key_two">stub</string>
     <string name="key_country">countries</string>
-    <string name="news_1">MI rope in Beuran Hendricks as Joseph\'s replacement</string>
-    <string name="news_1_desc">Mumbai Indians have signed up left-arm pacer Beuran Hendricks as replacement for the
-        injured Alzarri Joseph for the rest of the Indian Premier League 2019. The South African pacer has previously
-        been a part of King XI Punjab\'s set-up in IPL. Joseph sustained an injury on his right arm during MI\'s game
-        against Rajasthan Royals at the Wankhede stadium on April 13. The West Indian pacer, who came in as a
-        replacement for the injured Adam Milne, hurt his right arm while trying to stop a boundary hit by Shreyas Gopal
-        in the 19th over of RR\'s innings. The tall fast bowler had earlier taken his career best T20 figures of 6 for
-        12 against Sunrisers Hyderabad. Hendricks, the 28-year-old, has played 64 T20s, picking up 89 scalps at an
-        average of just over 20. He has also played two ODIs and 10 T20Is for South Africa MI lock horns against Chennai
-        Super Kings in their next IPL 2019 game in Chennai on April 26.
+
+    <string name="india">India</string>
+    <string name="score_1">India 359 - 264 Bangladesh</string>
+    <string name="bangladesh">Bangladesh</string>
+    <string name="description_1">India got exactly what they wanted from their second and final preparatory game against
+        Bangladesh as they might’ve gotten a solution for their long-lasting conundrum. They also got some players back
+        in form for the big tournament, much to the elation of the Indian fans. \n\nBatting first in Cardiff, Indian openers
+        got out early and failed once again to create an impact. Nevertheless, Virat Kohli hung in there alongside KL
+        Rahul for a brief period to settle the innings down a little bit. But after the skipper’s dismissal, India lost
+        Vijay Shankar as well, which saw them in deep trouble at 102/4 in 22 overs.
     </string>
-    <string name="news_2">Pant, Dhawan propel Delhi Capitals to the top</string>
-    <string name="news_2_desc">The left-hander put on show all the shots that have made him such an important prospect.
-        He pulled and hooked with glee, even if he got himself into some strange positions while doing so. The slog
-        sweep over fine leg was there too, as was the finely timed drive, and lofted flicks. Coming in after the fall of
-        Dhawan and Shreyas Iyer\'s wickets, Pant needed to ensure he plugged the opening while also making sure his side
-        did not fall too far behind the asking rate. His game plan was near perfect. He massively preferred the leg
-        side, scoring almost 80% of the runs there, but it was his maturity that stood out. He scored 6 fours and 2
-        sixes in his innings, but on many occasions was adept at picking the gaps and running hard for singles and
-        doubles. There has been a lot of criticism thrown Rishabh Pant\'s way after he has thrown his wicket away with
-        Delhi in winning positions. He saw Prithvi Shaw and Sherfane Rutherford fall the same way, but he ensured he was
-        there till the very end. He was unbeaten on 78 off 36 by the end, and would have delighted the team by showing
-        that he can indeed finish off games.
+    <string name="australlia">Australia</string>
+    <string name="sri_lanka">Sri Lanka</string>
+    <string name="score_2">Australia 239 - 241 Sri Lanka</string>
+    <string name="description_2">Just the way we all expect Australia to perform in a tournament of this stature and
+        magnitude, they managed to hammer the battered Lankan Lions convincingly in their second and final warm-up game
+        of the tournament. No team could’ve asked for a better start than this as they can rest till the weekend where
+        they begin their main campaign against Afghanistan. \n\nAfter a disappointing performance in the previous fixture,
+        Sri Lanka decided to bat first after winning the toss. They had a different opening combination for this game,
+        as Lahiru Thirimanne came out to bat alongside Dimuth Karunaratne. The duo had to face some serious music off
+        the new ball and almost survived the first ten overs without losing a wicket.
     </string>
-    <string name="news_3">The curious case of CSK\'s batting woes</string>
-    <string name="news_3_desc">Shane Watson, Faf du Plessis, Suresh Raina, Ambati Rayudu, Kedar Jadhav, MS Dhoni,
-        Ravindra Jadeja and Dwayne Bravo. You\'ll be hard pushed to find a rival for this batting line-up in the IPL.
-        Royal Challengers Bangalore may have the best two in the business, the Delhi Capitals may own the cream of
-        India\'s youth and the Knight Riders may have Andre Russell, but in cricket as in politics - 2 + 2 is not always
-        equal to 4. Yet, for all the pedigree in the line-up, CSK have had a dire season with the bat so far, with only
-        MS Dhoni aggregating more than 250 (314 at 104.67) so far. \"We\'ve got a very talented batting order, which has
-        been, you\'d say, consistent throughout the years. You look at the side on paper and you\'d say it\'s a
-        strength, but unfortunately, we just haven\'t been able to string together partnerships or individual scores
-        this year,\" head coach Stephen Fleming remarked after the close loss to the RCB. What\'s ailing this once
-        powerful batting failure?
+    <string name="england">England</string>
+    <string name="afganistan">Afghanistan</string>
+    <string name="score_3">England 161 - 160 Afghanistan</string>
+    <string name="description_3">One has to believe this is the best time to be an England cricket fan considering how
+        amazing a side they have built in recent times. The Brits have been thoroughly sensational in the last few
+        seasons and they are continuing to mesmerize everyone. With an astounding win against the highly-spirited
+        \n\nAfghanistan, they are heading into the tournament with outstanding confidence. Afghanistan got off to a poor
+        start batting first, with most of their batsmen failing to negotiate the fast bowling threat. The English
+        bowlers kept mixing their lengths precisely and the Afghan batsmen remained on the back foot expecting short
+        deliveries every now and then. As a result, they lost three wickets before getting to the fifty-run mark.
     </string>
 
 

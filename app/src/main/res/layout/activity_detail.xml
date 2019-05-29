@@ -11,28 +11,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <android.support.v7.widget.CardView
-                android:layout_marginTop="24dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginLeft="16dp"
+        <ImageView
+                android:id="@+id/logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="8dp"
-                android:maxHeight="256dp">
+                android:src="@drawable/logo"
+                android:layout_margin="24dp"
+        />
 
-
-            <ImageView
-                    android:id="@+id/icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="224dp"
-                    android:src="@drawable/ic_1"
-                    android:scaleType="centerCrop"
-            />
-
-
-        </android.support.v7.widget.CardView>
+        <com.united.sportsmens.views.CardResultView
+                android:id="@+id/detailResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
 
         <android.support.v7.widget.CardView
@@ -44,36 +34,15 @@
                 app:cardBackgroundColor="@android:color/white"
                 android:alpha="0.8">
 
-            <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="12dp"
-            >
-
-                <TextView
-                        android:id="@+id/titleView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        tools:text="sdakjljdasl;j"
-                        android:textSize="20sp"/>
-
                 <TextView
                         android:id="@+id/description"
-                        android:layout_below="@+id/titleView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="12dp"
                         tools:text="@string/app_name"/>
-            </RelativeLayout>
-
         </android.support.v7.widget.CardView>
-
-
     </LinearLayout>
-
-
 </android.support.v4.widget.NestedScrollView>
