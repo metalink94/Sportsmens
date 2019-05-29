@@ -13,6 +13,8 @@
 
         <android.support.v7.widget.CardView
                 android:layout_marginTop="24dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -24,8 +26,9 @@
             <ImageView
                     android:id="@+id/icon"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
+                    android:layout_height="224dp"
+                    android:src="@drawable/ic_1"
+                    android:scaleType="centerCrop"
             />
 
 
@@ -64,7 +67,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        tools:text="@string/kohli_desc"/>
+                        tools:text="@string/app_name"/>
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>

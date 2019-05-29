@@ -29,6 +29,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "releaseType"
+
+    productFlavors {
+        cricket {
+            dimension "releaseType"
+            applicationId = 'com.united.cricket'
+            versionCode 1
+            versionName "1.0"
+        }
+    }
 }
 
 androidExtensions {

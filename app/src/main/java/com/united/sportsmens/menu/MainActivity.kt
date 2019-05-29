@@ -15,18 +15,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        val firstModel = Sportsmen(R.drawable.ic_1, getString(R.string.kohli), getString(R.string.kohli_desc))
+        val firstModel = Sportsmen(R.drawable.ic_1, getString(R.string.news_1), getString(R.string.news_1_desc))
         first.initModel(firstModel)
         first.setOnClickListener { onClick(firstModel) }
-        val secondModel = Sportsmen(R.drawable.ic_2, getString(R.string.sharma), getString(R.string.sharma_desc))
+        val secondModel = Sportsmen(R.drawable.ic_2, getString(R.string.news_2), getString(R.string.news_2_desc))
         second.initModel(secondModel)
         second.setOnClickListener { onClick(secondModel) }
-        val thirdModel = Sportsmen(R.drawable.ic_3, getString(R.string.ms), getString(R.string.ms_desc))
+        val thirdModel = Sportsmen(R.drawable.ic_3, getString(R.string.news_3), getString(R.string.news_3_desc))
         third.initModel(thirdModel)
         third.setOnClickListener { onClick(thirdModel) }
-        val fourthModel = Sportsmen(R.drawable.ic_4, getString(R.string.rahul), getString(R.string.rahul_desc))
-        four.initModel(fourthModel)
-        four.setOnClickListener { onClick(fourthModel) }
     }
 
     private fun onClick(model: Sportsmen) {
