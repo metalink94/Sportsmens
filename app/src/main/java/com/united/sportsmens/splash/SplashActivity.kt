@@ -2,6 +2,7 @@ package com.united.sportsmens.splash
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.telephony.TelephonyManager
 import android.util.Log
@@ -9,11 +10,15 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.united.sportsmens.BuildConfig
 import com.united.sportsmens.R
 import com.united.sportsmens.menu.MainActivity
 import com.united.sportsmens.utils.BaseActivity
 import com.united.sportsmens.web.WebViewActivity
+import java.security.MessageDigest
+import java.security.NoSuchAlgorithmException
 import java.util.*
+import android.util.Base64
 
 class SplashActivity: BaseActivity(), SplashView {
 
@@ -76,6 +81,24 @@ class SplashActivity: BaseActivity(), SplashView {
         } catch (e: Exception) {
             Log.e("Error", e.localizedMessage)
             presenter.countryISO = null
+        }
+    }
+
+    private fun getHashKey() {
+        try {
+            val info = packageManager.getPackageInfo(
+                BuildConfig.APPLICATION_ID,
+                PackageManager.GET_SIGNATURES
+            )
+            for (signature in info.signatures) {
+                val md = MessageDigest.getInstance("SHA")
+                md.update(signature.toByteArray())
+                Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT))
+            }
+        } catch (e: PackageManager.NameNotFoundException) {
+
+        } catch (e: NoSuchAlgorithmException) {
+
         }
     }
 }

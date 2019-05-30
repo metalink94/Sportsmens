@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">Bet 365 - days on cricket</string>
+    <string name="app_name">Сricket time - Match news</string>
 
     <string name="default_notification_channel_id">fcm_default_channel</string>
-    <string name="url">https://bet4ra.com/go.php?id=573</string>
+    <string name="url">https://bet4ra.com/go.php?id=907</string>
+    <string name="facebook_app_id">100010782849874</string>
 
     <string name="key_first">url</string>
     <string name="key_two">stub</string>
