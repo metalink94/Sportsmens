@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
 import com.united.sportsmens.R
+import com.united.sportsmens.models.GameModel
 import com.united.sportsmens.models.Sportsmen
 import kotlinx.android.synthetic.main.card.view.*
 
@@ -29,5 +30,10 @@ class CardItemView
     fun initModel(model: Sportsmen) {
         titleRow = model.title
         setIcon(model.icon)
+    }
+
+    fun initModel(model: GameModel) {
+        titleRow = context.getString(model.titleRes)
+        setIcon(model.iconRes)
     }
 }

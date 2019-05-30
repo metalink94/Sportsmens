@@ -1,45 +1,35 @@
 <resources>
-    <string name="app_name">Сricket time - Match news</string>
+    <string name="app_name">Games every day</string>
 
     <string name="default_notification_channel_id">fcm_default_channel</string>
     <string name="url">https://bet4ra.com/go.php?id=907</string>
-    <string name="facebook_app_id">100010782849874</string>
+    <string name="facebook_app_id">590712344748902</string>
 
     <string name="key_first">url</string>
     <string name="key_two">stub</string>
     <string name="key_country">countries</string>
 
-    <string name="india">India</string>
-    <string name="score_1">India 359 - 264 Bangladesh</string>
-    <string name="bangladesh">Bangladesh</string>
-    <string name="description_1">India got exactly what they wanted from their second and final preparatory game against
-        Bangladesh as they might’ve gotten a solution for their long-lasting conundrum. They also got some players back
-        in form for the big tournament, much to the elation of the Indian fans. \n\nBatting first in Cardiff, Indian openers
-        got out early and failed once again to create an impact. Nevertheless, Virat Kohli hung in there alongside KL
-        Rahul for a brief period to settle the innings down a little bit. But after the skipper’s dismissal, India lost
-        Vijay Shankar as well, which saw them in deep trouble at 102/4 in 22 overs.
+
+    <string name="description_1">noughts and crosses are a logical game between two opponents in a square field 3 with 3 cells or more (up to the “infinite field”). One of the players plays "crosses", the second - "toes." The traditional Chinese game uses black and white stones.
+        Players take turns putting 3x3 marks on free squares (one is always a cross, the other is always a toe). The first one, who has lined up his 3 figures vertically, horizontally or diagonally, wins. The first move is made by the player placing the crosses.
+        \n\nUsually, at the end of the game, the winning party crosses out its three signs (zero or cross), which constitute a continuous row.
     </string>
-    <string name="australlia">Australia</string>
-    <string name="sri_lanka">Sri Lanka</string>
-    <string name="score_2">Australia 239 - 241 Sri Lanka</string>
-    <string name="description_2">Just the way we all expect Australia to perform in a tournament of this stature and
-        magnitude, they managed to hammer the battered Lankan Lions convincingly in their second and final warm-up game
-        of the tournament. No team could’ve asked for a better start than this as they can rest till the weekend where
-        they begin their main campaign against Afghanistan. \n\nAfter a disappointing performance in the previous fixture,
-        Sri Lanka decided to bat first after winning the toss. They had a different opening combination for this game,
-        as Lahiru Thirimanne came out to bat alongside Dimuth Karunaratne. The duo had to face some serious music off
-        the new ball and almost survived the first ten overs without losing a wicket.
+
+    <string name="description_2">“Battleship” is a game for two participants, in which players take turns calling coordinates on an opponent card unknown to them. If the opponent has a ship at these coordinates (the coordinates are occupied), then the ship or part of it is “heated”, and the person who is caught gets the right to make one more turn. The goal of the player is to sink all enemy ships first.
     </string>
-    <string name="england">England</string>
-    <string name="afganistan">Afghanistan</string>
-    <string name="score_3">England 161 - 160 Afghanistan</string>
-    <string name="description_3">One has to believe this is the best time to be an England cricket fan considering how
-        amazing a side they have built in recent times. The Brits have been thoroughly sensational in the last few
-        seasons and they are continuing to mesmerize everyone. With an astounding win against the highly-spirited
-        \n\nAfghanistan, they are heading into the tournament with outstanding confidence. Afghanistan got off to a poor
-        start batting first, with most of their batsmen failing to negotiate the fast bowling threat. The English
-        bowlers kept mixing their lengths precisely and the Afghan batsmen remained on the back foot expecting short
-        deliveries every now and then. As a result, they lost three wickets before getting to the fifty-run mark.
+
+    <string name="description_3">Sudoku - puzzle with numbers. Sometimes sudoku is called a magic square, which in general is wrong, as sudoku is a 9th order Latin square. Sudoku is actively publishing newspapers and magazines around the world, sudoku collections are published in large editions. Sudoku is a popular form of leisure.
+    </string>
+    <string name="name_1">noughts and crosses</string>
+    <string name="name_2">Battleship</string>
+    <string name="name_3">SUDOKU</string>
+    <string name="name_4">Crossword</string>
+    <string name="description_4">Crossword - puzzle, which is an interweaving of rows of cells, which are filled with
+        words for given values. \n\nUsually, the meanings of words are given descriptively under this figure, first the
+        meanings of the words, which should turn out to be horizontal, then - vertically. Crossword, like many games,
+        does not have strict rules and strict restrictions, but there are traditions that most “crossword” editions
+        adhere to. Usually, when the “rules of the crossword” are mentioned, it is this secret standard that is meant,
+        and only deviations from it are specified.
     </string>
 
 

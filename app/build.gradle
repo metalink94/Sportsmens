@@ -32,11 +32,11 @@ android {
     flavorDimensions "releaseType"
 
     productFlavors {
-        cricket {
+        game {
             dimension "releaseType"
-            applicationId = 'com.cr.bestsportapp'
-            versionCode 10
-            versionName "1.2.1"
+            applicationId = 'com.game.tablegame'
+            versionCode 1
+            versionName "1.0"
         }
     }
 }

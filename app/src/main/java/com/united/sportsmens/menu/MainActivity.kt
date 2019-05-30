@@ -3,6 +3,7 @@ package com.united.sportsmens.menu
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.united.sportsmens.R
+import com.united.sportsmens.models.GameModel
 import com.united.sportsmens.models.ResultModel
 import com.united.sportsmens.models.Team
 import kotlinx.android.synthetic.main.activity_main.*
@@ -19,33 +20,34 @@ class MainActivity : AppCompatActivity() {
         addFirstRow()
         addSecondRow()
         addThirdRow()
+        addFouthRow()
+    }
+
+    private fun addFouthRow() {
+        val fourhGame = GameModel(R.drawable.ic_4, R.string.name_4, R.string.description_4)
+        fourth.initModel(fourhGame)
+        fourth.setOnClickListener { onClick(fourhGame) }
     }
 
     private fun addThirdRow() {
-        val teamLeft = Team(R.drawable.ic_5, getString(R.string.england))
-        val teamRight = Team(R.drawable.ic_6, getString(R.string.afganistan))
-        val thirdResult = ResultModel(teamLeft, getString(R.string.score_3), teamRight, getString(R.string.description_3))
-        third.initModel(thirdResult)
-        third.setOnClickListener { onClick(thirdResult) }
+        val thirdGame = GameModel(R.drawable.ic_3, R.string.name_3, R.string.description_3)
+        third.initModel(thirdGame)
+        third.setOnClickListener { onClick(thirdGame) }
     }
 
     private fun addSecondRow() {
-        val teamLeft = Team(R.drawable.ic_3, getString(R.string.australlia))
-        val teamRight = Team(R.drawable.ic_4, getString(R.string.sri_lanka))
-        val secondResult = ResultModel(teamLeft, getString(R.string.score_2), teamRight, getString(R.string.description_2))
-        second.initModel(secondResult)
-        second.setOnClickListener { onClick(secondResult) }
+        val secondGame = GameModel(R.drawable.ic_2, R.string.name_2, R.string.description_2)
+        second.initModel(secondGame)
+        second.setOnClickListener { onClick(secondGame) }
     }
 
     private fun addFirstRow() {
-        val teamLeft = Team(R.drawable.ic_1, getString(R.string.india))
-        val teamRight = Team(R.drawable.ic_2, getString(R.string.bangladesh))
-        val firstResult = ResultModel(teamLeft, getString(R.string.score_1), teamRight, getString(R.string.description_1))
-        first.initModel(firstResult)
-        first.setOnClickListener { onClick(firstResult) }
+        val firstGame = GameModel(R.drawable.ic_1, R.string.name_1, R.string.description_1)
+        first.initModel(firstGame)
+        first.setOnClickListener { onClick(firstGame) }
     }
 
-    private fun onClick(model: ResultModel) {
+    private fun onClick(model: GameModel) {
         startActivity(DetailActivity.getInstance(this, model))
     }
 }
