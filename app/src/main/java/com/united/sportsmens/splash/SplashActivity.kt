@@ -19,6 +19,8 @@ import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import java.util.*
 import android.util.Base64
+import com.united.sportsmens.web.WebXWalkActivity
+
 
 class SplashActivity: BaseActivity(), SplashView {
 
@@ -30,6 +32,7 @@ class SplashActivity: BaseActivity(), SplashView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         url = getString(R.string.url)
+        getHashKey()
         presenter.setView(this)
         presenter.onCreate()
         checkDatabase()
@@ -58,7 +61,8 @@ class SplashActivity: BaseActivity(), SplashView {
 
 
     override fun showWeb() {
-        startActivity(WebViewActivity.getInstance(this, url))
+//        startActivity(WebViewActivity.getInstance(this, url))
+        startActivity(WebXWalkActivity.getInstance(this, url ?: ""))
         finish()
     }
 

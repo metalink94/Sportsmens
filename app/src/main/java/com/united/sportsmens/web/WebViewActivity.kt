@@ -11,13 +11,18 @@ import android.content.res.Configuration
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.Message
 import android.support.v4.app.ActivityCompat
 import android.util.Log
+import android.view.View
 import android.view.WindowManager
 import android.webkit.*
 import android.widget.Toast
 import com.united.sportsmens.R
 import kotlinx.android.synthetic.main.activity_web.*
+import java.net.CookieHandler
+import java.net.CookiePolicy
+import android.webkit.CookieSyncManager
 
 class WebViewActivity: BaseActivity() {
 
@@ -79,7 +84,7 @@ class WebViewActivity: BaseActivity() {
             }
 
             override fun onJsAlert(view: WebView?, url: String?, message: String?, result: JsResult?): Boolean {
-                Log.d("LogTag", message)
+                Log.d("get Url", message)
                 result?.confirm()
                 return true;
             }
@@ -101,6 +106,12 @@ class WebViewActivity: BaseActivity() {
                     finish()
                     return true
                 }
+                if (url.startsWith("https://gis")) {
+                    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                    startActivity(browserIntent)
+                    finish()
+                    return true
+                }
                 currentUrl = url
                 Log.d("WebView", "get Url $currentUrl")
                 return false
@@ -113,9 +124,11 @@ class WebViewActivity: BaseActivity() {
         CookieSyncManager.createInstance(this)
         val cookieManager = CookieManager.getInstance()
         cookieManager.setAcceptCookie(true)
-
+        val coreCookieManager = WebkitCookieManagerProxy(null, CookiePolicy.ACCEPT_ALL)
+        CookieHandler.setDefault(coreCookieManager)
         webView.clearHistory()
         webView.setInitialScale(1)
+        webView.settings.setAppCacheMaxSize(1024*1024*8)
         webView.settings.setAppCacheEnabled(true)
         webView.settings.javaScriptEnabled = true
         webView.settings.loadWithOverviewMode = true

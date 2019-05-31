@@ -3,7 +3,10 @@
           package="com.united.sportsmens"
           android:targetSandboxVersion="1">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
 
     <application
@@ -45,6 +48,10 @@
                   android:screenOrientation="portrait"/>
 
         <activity android:name=".web.WebViewActivity"
+                  android:configChanges="keyboardHidden|orientation|screenSize"
+                  android:windowSoftInputMode="stateHidden|adjustResize"/>
+
+        <activity android:name=".web.WebXWalkActivity"
                   android:configChanges="keyboardHidden|orientation|screenSize"
                   android:windowSoftInputMode="stateHidden|adjustResize"/>
 

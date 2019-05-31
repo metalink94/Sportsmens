@@ -1,5 +1,6 @@
 package com.united.sportsmens.splash
 
+import android.util.Log
 import com.united.sportsmens.Features
 import com.united.sportsmens.utils.mvp.ViewPresenter
 
@@ -36,6 +37,7 @@ class SplashPresenter: ViewPresenter<SplashView>() {
 
     private fun isCorrectCountry(): Boolean {
         var isCorrect = false
+        Log.d("ISO", "get Country ISO $countryISO and $countryDatabaseIso")
         val countryIso = countryISO ?: ""
         for (country in list) {
             if (country.toLowerCase() == countryIso.toLowerCase()) {
