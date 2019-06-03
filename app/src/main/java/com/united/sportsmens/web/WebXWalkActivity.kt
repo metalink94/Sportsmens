@@ -5,47 +5,68 @@ import android.content.Intent
 import android.os.Bundle
 import com.united.sportsmens.R
 import android.graphics.Bitmap;
-import android.util.Log;
+import android.graphics.Canvas
+import android.util.Log
 import android.view.TextureView;
 import android.view.ViewGroup;
 import com.united.sportsmens.utils.BaseActivity
 import kotlinx.android.synthetic.main.xwalk_view.*
 
-import org.xwalk.core.XWalkCookieManager;
-import org.xwalk.core.XWalkGetBitmapCallback;
-import org.xwalk.core.XWalkPreferences;
-import org.xwalk.core.XWalkResourceClient;
-import org.xwalk.core.XWalkUIClient;
-import org.xwalk.core.XWalkView;
-import org.xwalk.core.XWalkWebResourceRequest;
-import org.xwalk.core.XWalkWebResourceResponse;
+import org.xwalk.core.XWalkCookieManager
+import org.xwalk.core.XWalkPreferences
+import org.xwalk.core.XWalkResourceClient
+import org.xwalk.core.XWalkUIClient
+import org.xwalk.core.XWalkView
 
-import java.net.CookieManager;
-import java.net.HttpCookie;
-import java.util.List;
+import java.net.CookieManager
 
 class WebXWalkActivity: BaseActivity() {
+
 
     private val mXCookieManager: XWalkCookieManager = XWalkCookieManager()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // preferences
         XWalkPreferences.setValue(XWalkPreferences.ANIMATABLE_XWALK_VIEW, true)
+        // layout
         setContentView(R.layout.xwalk_view)
-        xwalkview.setResourceClient(MyResourceClient(xwalkview))
+        // touch listener
+        xwalkview.setOnTouchListener { view, motionEvent ->
+            Log.d(TAG, "onTouch: $motionEvent")
+            false
+        }
+        // listeners
+        setResourceClient()
         xwalkview.setUIClient(MyUIClient(xwalkview))
         // cookie manager
         mXCookieManager.setAcceptCookie(true)
         mXCookieManager.setAcceptFileSchemeCookies(true)
-        xwalkview.loadUrl(intent.getStringExtra(KEY_URL))
+        mXCookieManager.setCookie("http://.vk.com/", "cookie=hi")
+        // load url
+        val url = intent.getStringExtra(URL) ?: getString(R.string.url)
+        xwalkview.loadUrl(url)
     }
 
-    companion object {
+    private fun setResourceClient() {
+        xwalkview.setResourceClient(object : XWalkResourceClient(xwalkview) {
+            override fun onLoadStarted(view: XWalkView, url: String) {
+                Log.d(TAG, "onLoadStarted: $url")
+            }
 
-        private const val KEY_URL = "url"
+            override fun onLoadFinished(view: XWalkView, url: String) {
+                Log.d(TAG, "onLoadFinished: $url")
+            }
 
-        fun getInstance(context: Context, url: String): Intent = Intent(context, WebXWalkActivity::class.java)
-            .putExtra(KEY_URL, url)
+            override fun onProgressChanged(view: XWalkView, newProgress: Int) {
+                Log.d(TAG, "onProgressChanged: $newProgress")
+            }
+
+            override fun shouldOverrideUrlLoading(view: XWalkView, url: String): Boolean {
+                Log.d(TAG, "shouldOverrideUrlLoading: $url")
+                return super.shouldOverrideUrlLoading(view, url)
+            }
+        })
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -84,7 +105,7 @@ class WebXWalkActivity: BaseActivity() {
     }
 
     override fun onBackPressed() {
-
+        Log.d(TAG, "onBackPressed")
         super.onBackPressed()
     }
 
@@ -154,65 +175,76 @@ class WebXWalkActivity: BaseActivity() {
         return null
     }
 
-}
+    /**
+     * Example of capturing image from XWalkView based on TextureView
+     * <br></br><br></br>
+     * Use XWalkView.captureBitmapAsync(XWalkGetBitmapCallback callback) instead of this method
+     *
+     * @return Image of view's content
+     */
+    @Deprecated("")
+    fun captureImage(): Bitmap? {
+        if (xwalkview != null) {
+            var bitmap: Bitmap? = null
 
-/**
- * Example of XWalkResourceClient implementation
- */
-internal class MyResourceClient(view: XWalkView) : XWalkResourceClient(view) {
+            var isCrosswalk = false
+            try {
+                Class.forName("org.xwalk.core.XWalkView")
+                isCrosswalk = true
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
 
-    val TAG = "XWalkViewCallbacks"
-
-    override fun onLoadStarted(view: XWalkView, url: String) {
-        Log.w(TAG, "onLoadStarted: $url")
-    }
-
-    override fun onLoadFinished(view: XWalkView, url: String) {
-        Log.w(TAG, "onLoadFinished: $url")
-    }
-
-    override fun onProgressChanged(view: XWalkView, newProgress: Int) {
-        Log.w(TAG, "onProgressChanged: $newProgress")
-    }
-
-    override fun shouldOverrideUrlLoading(view: XWalkView, url: String): Boolean {
-        Log.w(TAG, "shouldOverrideUrlLoading: $url")
-        return super.shouldOverrideUrlLoading(view, url)
-    }
-
-    override fun shouldInterceptLoadRequest(
-        view: XWalkView,
-        request: XWalkWebResourceRequest
-    ): XWalkWebResourceResponse {
-        Log.w(
-            TAG, "shouldInterceptLoadRequest: url: " + request.url
-                    + ", method: " + request.method
-        )
-        return super.shouldInterceptLoadRequest(view, request)
-    }
-}
-
-/**
- * Example of XWalkUIClient implementation
- */
-internal class MyUIClient(view: XWalkView) : XWalkUIClient(view) {
-
-    val TAG = "XWalkViewCallbacks"
-
-    override fun onPageLoadStarted(view: XWalkView?, url: String?) {
-        super.onPageLoadStarted(view, url)
-        Log.w(TAG, "onPageLoadStarted: $url")
-    }
-
-    override fun onPageLoadStopped(view: XWalkView, url: String, status: LoadStatus) {
-        Log.w(TAG, "onPageLoadStopped: $url, status: $status")
-
-        if (status == LoadStatus.FINISHED) {
-            view.captureBitmapAsync(object : XWalkGetBitmapCallback() {
-                override fun onFinishGetBitmap(bitmap: Bitmap, i: Int) {
-                    Log.w(TAG, "onFinishGetBitmap: $bitmap")
+            if (isCrosswalk) {
+                try {
+                    val textureView = findXWalkTextureView(xwalkview)
+                    bitmap = textureView!!.bitmap
+                } catch (e: Exception) {
+                    e.printStackTrace()
                 }
-            })
+
+            } else {
+                bitmap = Bitmap.createBitmap(xwalkview.width, xwalkview.height,
+                    Bitmap.Config.ARGB_8888)
+                val c = Canvas(bitmap!!)
+                xwalkview.draw(c)
+            }
+
+            return bitmap
+        } else {
+            return null
         }
+    }
+
+    /**
+     * Example of XWalkUIClient implementation
+     */
+    internal inner class MyUIClient(view: XWalkView) : XWalkUIClient(view) {
+
+        override fun onPageLoadStarted(view: XWalkView, url: String) {
+            Log.d(TAG, "onPageLoadStarted: $url")
+        }
+
+        override fun onPageLoadStopped(view: XWalkView, url: String, status: XWalkUIClient.LoadStatus) {
+            Log.d(TAG, "onPageLoadStopped: $url, status: $status")
+
+            /*if (status == XWalkUIClient.LoadStatus.FINISHED) {
+                view.captureBitmapAsync(object : XWalkGetBitmapCallback() {
+                    override fun onFinishGetBitmap(bitmap: Bitmap, i: Int) {
+                        Log.d(TAG, "onFinishGetBitmap: $bitmap")
+                    }
+                })
+            }*/
+        }
+    }
+
+    companion object {
+
+        val TAG = "XWalkViewCallbacks"
+        private const val URL = "url"
+
+        fun getInstance(context: Context, url: String?) : Intent =
+                Intent(context, WebXWalkActivity::class.java)
+                    .putExtra(URL, url)
     }
 }
