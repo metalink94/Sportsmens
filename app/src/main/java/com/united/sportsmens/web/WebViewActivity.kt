@@ -11,10 +11,8 @@ import android.content.res.Configuration
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.os.Message
 import android.support.v4.app.ActivityCompat
 import android.util.Log
-import android.view.View
 import android.view.WindowManager
 import android.webkit.*
 import android.widget.Toast
@@ -26,7 +24,8 @@ import android.webkit.CookieSyncManager
 
 class WebViewActivity: BaseActivity() {
 
-    var currentUrl: String = ""
+    private var currentUrl: String = ""
+    private var redirect: String = ""
     private var uploadMessage: ValueCallback<Array<Uri>>? = null
     private var mUploadMessage: ValueCallback<Uri>? = null
     private val PICK_FROM_GALLERY = 1
@@ -37,6 +36,7 @@ class WebViewActivity: BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web)
         currentUrl = intent.getStringExtra(KEY_URL)
+        redirect = intent.getStringExtra(KEY_REDIRECT) ?: getString(R.string.redirect)
         checkPermissions()
         initWebView()
         swipeRefresh.setOnRefreshListener {
@@ -101,12 +101,13 @@ class WebViewActivity: BaseActivity() {
             }
 
             private fun shouldOverrideUrlLoading(url: String): Boolean {
+                CookieSyncManager.getInstance().startSync()
                 if (url.startsWith("market")) {
                     startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                     finish()
                     return true
                 }
-                if (url.startsWith("https://gis")) {
+                if (url.startsWith(redirect)) {
                     val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
                     startActivity(browserIntent)
                     finish()
@@ -122,6 +123,7 @@ class WebViewActivity: BaseActivity() {
             }
         }
         CookieSyncManager.createInstance(this)
+        CookieSyncManager.getInstance().startSync()
         val cookieManager = CookieManager.getInstance()
         cookieManager.setAcceptCookie(true)
         val coreCookieManager = WebkitCookieManagerProxy(null, CookiePolicy.ACCEPT_ALL)
@@ -179,16 +181,18 @@ class WebViewActivity: BaseActivity() {
         if (webView.canGoBack()) {
             webView.goBack();
         } else {
-            super.onBackPressed();
+            super.onBackPressed()
         }
     }
 
     companion object {
-        const val KEY_URL = "url"
+        private const val KEY_URL = "url"
+        private const val KEY_REDIRECT = "redirect"
 
-        fun getInstance(context: Context, url: String?): Intent =
+        fun getInstance(context: Context, url: String?, redirect: String?): Intent =
             Intent(context, WebViewActivity::class.java)
                 .putExtra(KEY_URL, url)
+                .putExtra(KEY_REDIRECT, redirect)
     }
 
 }

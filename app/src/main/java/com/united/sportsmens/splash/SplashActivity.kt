@@ -3,6 +3,7 @@ package com.united.sportsmens.splash
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.telephony.TelephonyManager
 import android.util.Log
@@ -25,6 +26,7 @@ import com.united.sportsmens.web.WebXWalkActivity
 class SplashActivity: BaseActivity(), SplashView {
 
     private var url: String? = ""
+    private var redirect: String? = ""
 
     private val presenter: SplashPresenter = SplashPresenter()
 
@@ -32,6 +34,7 @@ class SplashActivity: BaseActivity(), SplashView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         url = getString(R.string.url)
+        redirect = getString(R.string.redirect)
         getHashKey()
         presenter.setView(this)
         presenter.onCreate()
@@ -44,6 +47,7 @@ class SplashActivity: BaseActivity(), SplashView {
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0.value != null) {
                     url = p0.child(getString(R.string.key_first)).value as String?
+                    redirect = p0.child(getString(R.string.key_redirect)).value as String?
                     presenter.isNeedStub = p0.child(getString(R.string.key_two)).value as Boolean
                     presenter.countryDatabaseIso = p0.child(getString(R.string.key_country)).value as String?
                 }
@@ -61,8 +65,11 @@ class SplashActivity: BaseActivity(), SplashView {
 
 
     override fun showWeb() {
-//        startActivity(WebViewActivity.getInstance(this, url))
-        startActivity(WebXWalkActivity.getInstance(this, url ?: ""))
+        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.N) {
+            startActivity(WebViewActivity.getInstance(this, url, redirect))
+        } else {
+            startActivity(WebXWalkActivity.getInstance(this, url ?: ""))
+        }
         finish()
     }
 
