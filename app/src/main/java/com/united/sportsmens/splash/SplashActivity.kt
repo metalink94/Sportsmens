@@ -74,6 +74,7 @@ class SplashActivity: BaseActivity(), SplashView {
     }
 
     override fun showStub() {
+//        showWeb()
         startActivity(Intent(this, MainActivity::class.java))
     }
 

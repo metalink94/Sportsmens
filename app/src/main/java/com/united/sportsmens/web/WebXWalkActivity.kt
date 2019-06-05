@@ -8,19 +8,16 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas
 import android.util.Log
 import android.view.TextureView;
-import android.view.ViewGroup;
-import com.united.sportsmens.utils.BaseActivity
+import android.view.ViewGroup
 import kotlinx.android.synthetic.main.xwalk_view.*
-
-import org.xwalk.core.XWalkCookieManager
-import org.xwalk.core.XWalkPreferences
-import org.xwalk.core.XWalkResourceClient
-import org.xwalk.core.XWalkUIClient
-import org.xwalk.core.XWalkView
+import org.xwalk.core.*
 
 import java.net.CookieManager
 
-class WebXWalkActivity: BaseActivity() {
+class WebXWalkActivity: XWalkActivity() {
+    override fun onXWalkReady() {
+
+    }
 
 
     private val mXCookieManager: XWalkCookieManager = XWalkCookieManager()

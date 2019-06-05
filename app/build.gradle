@@ -34,9 +34,9 @@ android {
     productFlavors {
         game {
             dimension "releaseType"
-            applicationId = 'com.game.tablegamesuper'
-            versionCode 2
-            versionName "1.0"
+            applicationId = 'com.game.tablegame'
+            versionCode 5
+            versionName "1.2.1"
         }
     }
 }
