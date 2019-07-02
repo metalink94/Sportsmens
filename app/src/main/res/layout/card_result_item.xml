@@ -11,12 +11,13 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="6dp"
             android:paddingBottom="6dp">
 
         <LinearLayout
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center">
 
@@ -31,21 +32,30 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="Left title"/>
+
+            <TextView
+                    android:id="@+id/leftCoef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:background="@drawable/coeff_bg"/>
         </LinearLayout>
 
         <TextView
-                android:layout_weight="1"
+                android:layout_weight="0"
                 android:id="@+id/score"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_marginRight="12dp"
                 tools:text="Score"/>
 
         <LinearLayout
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center">
 
@@ -60,6 +70,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="Left title"/>
+
+            <TextView
+                    android:id="@+id/rightCoef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:background="@drawable/coeff_bg"/>
         </LinearLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>

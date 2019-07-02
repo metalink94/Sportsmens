@@ -34,9 +34,9 @@ android {
     productFlavors {
         cricket {
             dimension "releaseType"
-            applicationId = 'com.cr.bestsportapp'
-            versionCode 10
-            versionName "1.2.1"
+            applicationId = 'com.cricketapp.tips'
+            versionCode 4
+            versionName "1.1.0"
         }
     }
 }

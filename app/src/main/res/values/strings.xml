@@ -1,46 +1,41 @@
 <resources>
-    <string name="app_name">Сricket time - Match news</string>
+    <string name="app_name">Cricket tips 365 days</string>
 
     <string name="default_notification_channel_id">fcm_default_channel</string>
     <string name="url">https://bet4ra.com/go.php?id=907</string>
-    <string name="facebook_app_id">100010782849874</string>
+    <string name="facebook_app_id">412052572724127</string>
 
     <string name="key_first">url</string>
     <string name="key_two">stub</string>
     <string name="key_country">countries</string>
 
-    <string name="india">India</string>
-    <string name="score_1">India 359 - 264 Bangladesh</string>
-    <string name="bangladesh">Bangladesh</string>
-    <string name="description_1">India got exactly what they wanted from their second and final preparatory game against
-        Bangladesh as they might’ve gotten a solution for their long-lasting conundrum. They also got some players back
-        in form for the big tournament, much to the elation of the Indian fans. \n\nBatting first in Cardiff, Indian openers
-        got out early and failed once again to create an impact. Nevertheless, Virat Kohli hung in there alongside KL
-        Rahul for a brief period to settle the innings down a little bit. But after the skipper’s dismissal, India lost
-        Vijay Shankar as well, which saw them in deep trouble at 102/4 in 22 overs.
+    <string name="india">Madagascar</string>
+    <string name="score_1">Score: 0-0\n26.06.2019\n22:10</string>
+    <string name="bangladesh">Burundi</string>
+    <string name="description_1">Double Chance: 1.34 и 1.5 \nDraw: Yes 3.94 и No 1.5 \nEven/Odd: Yes 1.26 и No 4.02
     </string>
-    <string name="australlia">Australia</string>
-    <string name="sri_lanka">Sri Lanka</string>
-    <string name="score_2">Australia 239 - 241 Sri Lanka</string>
-    <string name="description_2">Just the way we all expect Australia to perform in a tournament of this stature and
-        magnitude, they managed to hammer the battered Lankan Lions convincingly in their second and final warm-up game
-        of the tournament. No team could’ve asked for a better start than this as they can rest till the weekend where
-        they begin their main campaign against Afghanistan. \n\nAfter a disappointing performance in the previous fixture,
-        Sri Lanka decided to bat first after winning the toss. They had a different opening combination for this game,
-        as Lahiru Thirimanne came out to bat alongside Dimuth Karunaratne. The duo had to face some serious music off
-        the new ball and almost survived the first ten overs without losing a wicket.
+    <string name="australlia">West Indies</string>
+    <string name="sri_lanka">India</string>
+    <string name="score_2">Score: 83 - 286\n26.06.2019\n17:10</string>
+    <string name="description_2">Double Chance: 1.94 и 1.5 \nDraw: Yes 3.94 и No 2.5 \nEven/Odd: Yes 2.26 и No 4.82
     </string>
-    <string name="england">England</string>
-    <string name="afganistan">Afghanistan</string>
-    <string name="score_3">England 161 - 160 Afghanistan</string>
-    <string name="description_3">One has to believe this is the best time to be an England cricket fan considering how
-        amazing a side they have built in recent times. The Brits have been thoroughly sensational in the last few
-        seasons and they are continuing to mesmerize everyone. With an astounding win against the highly-spirited
-        \n\nAfghanistan, they are heading into the tournament with outstanding confidence. Afghanistan got off to a poor
-        start batting first, with most of their batsmen failing to negotiate the fast bowling threat. The English
-        bowlers kept mixing their lengths precisely and the Afghan batsmen remained on the back foot expecting short
-        deliveries every now and then. As a result, they lost three wickets before getting to the fifty-run mark.
+    <string name="england">Sussex Sharks</string>
+    <string name="afganistan">Durham County</string>
+    <string name="score_3">Score: 448-668\n25.06.2019\n22:30</string>
+    <string name="description_3">Double Chance: 5.94 и 1.5\nDraw: Yes 2.94 и No 1.5\nEven/Odd: Yes 3.26 и No 1.82
     </string>
-
+    <string name="sri_lanka2">Sri Lanka</string>
+    <string name="south_africa">South Africa</string>
+    <string name="score_4">Score: 0-0\n28.06.2019\n10:30</string>
+    <string name="description_4">Double Chance: 194 и 1.2\nDraw: Yes 2.02 и No 1.5\nEven/Odd: Yes 1.26 и No 2.82
+    </string>
+    <string name="coef_1">2.83</string>
+    <string name="coef_2">3.42</string>
+    <string name="coef_3">1.83</string>
+    <string name="coef_4">2.9</string>
+    <string name="coef_5">2.5</string>
+    <string name="coef_6">1.9</string>
+    <string name="coef_7">2.5</string>
+    <string name="coef_8">1.5</string>
 
 </resources>

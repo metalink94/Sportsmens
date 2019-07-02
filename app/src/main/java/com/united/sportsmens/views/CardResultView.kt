@@ -30,6 +30,11 @@ class CardResultView
     private fun setRightSide(rightTeam: Team) {
         setRightIcon(rightTeam.iconRes)
         setRightTitle(rightTeam.teamName)
+        setRightCoef(rightTeam.teamCoef)
+    }
+
+    private fun setRightCoef(teamCoef: String) {
+        rightCoef.text = teamCoef
     }
 
     private fun setRightTitle(teamName: String) {
@@ -43,6 +48,11 @@ class CardResultView
     private fun setLeftSide(leftTeam: Team) {
         setLeftIcon(leftTeam.iconRes)
         setLeftTitle(leftTeam.teamName)
+        setLeftCoef(leftTeam.teamCoef)
+    }
+
+    private fun setLeftCoef(teamCoef: String) {
+        leftCoef.text = teamCoef
     }
 
     private fun setLeftTitle(teamName: String) {

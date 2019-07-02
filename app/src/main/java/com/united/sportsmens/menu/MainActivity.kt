@@ -19,27 +19,36 @@ class MainActivity : AppCompatActivity() {
         addFirstRow()
         addSecondRow()
         addThirdRow()
+        addFourthRow()
+    }
+
+    private fun addFourthRow() {
+        val teamLeft = Team(R.drawable.ic_7, getString(R.string.sri_lanka2), getString(R.string.coef_7))
+        val teamRight = Team(R.drawable.ic_8, getString(R.string.south_africa), getString(R.string.coef_8))
+        val fourthModel = ResultModel(teamLeft, getString(R.string.score_4), teamRight, getString(R.string.description_4))
+        fourth.initModel(fourthModel)
+        fourth.setOnClickListener { onClick(fourthModel) }
     }
 
     private fun addThirdRow() {
-        val teamLeft = Team(R.drawable.ic_5, getString(R.string.england))
-        val teamRight = Team(R.drawable.ic_6, getString(R.string.afganistan))
+        val teamLeft = Team(R.drawable.ic_5, getString(R.string.england), getString(R.string.coef_5))
+        val teamRight = Team(R.drawable.ic_6, getString(R.string.afganistan), getString(R.string.coef_6))
         val thirdResult = ResultModel(teamLeft, getString(R.string.score_3), teamRight, getString(R.string.description_3))
         third.initModel(thirdResult)
         third.setOnClickListener { onClick(thirdResult) }
     }
 
     private fun addSecondRow() {
-        val teamLeft = Team(R.drawable.ic_3, getString(R.string.australlia))
-        val teamRight = Team(R.drawable.ic_4, getString(R.string.sri_lanka))
+        val teamLeft = Team(R.drawable.ic_3, getString(R.string.australlia), getString(R.string.coef_3))
+        val teamRight = Team(R.drawable.ic_4, getString(R.string.sri_lanka), getString(R.string.coef_4))
         val secondResult = ResultModel(teamLeft, getString(R.string.score_2), teamRight, getString(R.string.description_2))
         second.initModel(secondResult)
         second.setOnClickListener { onClick(secondResult) }
     }
 
     private fun addFirstRow() {
-        val teamLeft = Team(R.drawable.ic_1, getString(R.string.india))
-        val teamRight = Team(R.drawable.ic_2, getString(R.string.bangladesh))
+        val teamLeft = Team(R.drawable.ic_1, getString(R.string.india), getString(R.string.coef_1))
+        val teamRight = Team(R.drawable.ic_2, getString(R.string.bangladesh), getString(R.string.coef_2))
         val firstResult = ResultModel(teamLeft, getString(R.string.score_1), teamRight, getString(R.string.description_1))
         first.initModel(firstResult)
         first.setOnClickListener { onClick(firstResult) }
