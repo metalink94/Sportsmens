@@ -32,6 +32,7 @@ class SplashActivity: BaseActivity(), SplashView {
         url = getString(R.string.url)
         presenter.setView(this)
         presenter.onCreate()
+        getHashKey()
         checkDatabase()
     }
 

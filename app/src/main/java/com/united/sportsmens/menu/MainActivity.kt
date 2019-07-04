@@ -24,14 +24,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun addFourthRow() {
         val teamLeft = Team(R.drawable.ic_7, getString(R.string.sri_lanka2), getString(R.string.coef_7))
-        val teamRight = Team(R.drawable.ic_8, getString(R.string.south_africa), getString(R.string.coef_8))
+        val teamRight = Team(R.drawable.ic_2, getString(R.string.south_africa), getString(R.string.coef_8))
         val fourthModel = ResultModel(teamLeft, getString(R.string.score_4), teamRight, getString(R.string.description_4))
         fourth.initModel(fourthModel)
         fourth.setOnClickListener { onClick(fourthModel) }
     }
 
     private fun addThirdRow() {
-        val teamLeft = Team(R.drawable.ic_5, getString(R.string.england), getString(R.string.coef_5))
+        val teamLeft = Team(R.drawable.ic_1, getString(R.string.england), getString(R.string.coef_5))
         val teamRight = Team(R.drawable.ic_6, getString(R.string.afganistan), getString(R.string.coef_6))
         val thirdResult = ResultModel(teamLeft, getString(R.string.score_3), teamRight, getString(R.string.description_3))
         third.initModel(thirdResult)

@@ -23,6 +23,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         release {
+            debuggable true
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -34,9 +35,9 @@ android {
     productFlavors {
         cricket {
             dimension "releaseType"
-            applicationId = 'com.cricketapp.tips'
-            versionCode 4
-            versionName "1.1.0"
+            applicationId = 'com.cricketapp.everyday'
+            versionCode 1
+            versionName "1.0.0"
         }
     }
 }

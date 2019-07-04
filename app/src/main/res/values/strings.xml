@@ -1,41 +1,41 @@
 <resources>
-    <string name="app_name">Cricket tips 365 days</string>
+    <string name="app_name">Cricket everyday - tips</string>
 
     <string name="default_notification_channel_id">fcm_default_channel</string>
-    <string name="url">https://bet4ra.com/go.php?id=907</string>
-    <string name="facebook_app_id">412052572724127</string>
+    <string name="url">https://bet4ra.com/go.php?id=1110</string>
+    <string name="facebook_app_id">389572285013840</string>
 
     <string name="key_first">url</string>
     <string name="key_two">stub</string>
     <string name="key_country">countries</string>
 
-    <string name="india">Madagascar</string>
-    <string name="score_1">Score: 0-0\n26.06.2019\n22:10</string>
-    <string name="bangladesh">Burundi</string>
+    <string name="india">England</string>
+    <string name="score_1">Score: 83 - 183\n01.07.2019\n22:10</string>
+    <string name="bangladesh">Republic of Ireland</string>
     <string name="description_1">Double Chance: 1.34 и 1.5 \nDraw: Yes 3.94 и No 1.5 \nEven/Odd: Yes 1.26 и No 4.02
     </string>
-    <string name="australlia">West Indies</string>
-    <string name="sri_lanka">India</string>
-    <string name="score_2">Score: 83 - 286\n26.06.2019\n17:10</string>
-    <string name="description_2">Double Chance: 1.94 и 1.5 \nDraw: Yes 3.94 и No 2.5 \nEven/Odd: Yes 2.26 и No 4.82
+    <string name="australlia">Sri Lanka</string>
+    <string name="sri_lanka">West Indies</string>
+    <string name="score_2">Score: 0 - 0\n01.07.2019\n17:10</string>
+    <string name="description_2">Double Chance: 1.94 и 1.5 \nDraw: Yes 1.94 и No 2.5 \nEven/Odd: Yes 2.26 и No 1.82
     </string>
-    <string name="england">Sussex Sharks</string>
-    <string name="afganistan">Durham County</string>
-    <string name="score_3">Score: 448-668\n25.06.2019\n22:30</string>
-    <string name="description_3">Double Chance: 5.94 и 1.5\nDraw: Yes 2.94 и No 1.5\nEven/Odd: Yes 3.26 и No 1.82
+    <string name="england">England</string>
+    <string name="afganistan">Australiay</string>
+    <string name="score_3">Score: 448 - 668\n30.06.2019\n22:30</string>
+    <string name="description_3">Double Chance: 3.94 и 2.5\nDraw: Yes 1.94 и No 1.5\nEven/Odd: Yes 2.26 и No 1.82
     </string>
-    <string name="sri_lanka2">Sri Lanka</string>
-    <string name="south_africa">South Africa</string>
-    <string name="score_4">Score: 0-0\n28.06.2019\n10:30</string>
-    <string name="description_4">Double Chance: 194 и 1.2\nDraw: Yes 2.02 и No 1.5\nEven/Odd: Yes 1.26 и No 2.82
+    <string name="sri_lanka2">Zimbabwe</string>
+    <string name="south_africa">Republic of Ireland</string>
+    <string name="score_4">Score: 0-0\n2.07.2019\n10:30</string>
+    <string name="description_4">Double Chance: 1.4 и 1.9\nDraw: Yes 2.02 и No 1.5\nEven/Odd: Yes 1.26 и No 1.82
     </string>
     <string name="coef_1">2.83</string>
-    <string name="coef_2">3.42</string>
-    <string name="coef_3">1.83</string>
-    <string name="coef_4">2.9</string>
-    <string name="coef_5">2.5</string>
-    <string name="coef_6">1.9</string>
-    <string name="coef_7">2.5</string>
-    <string name="coef_8">1.5</string>
+    <string name="coef_2">1.42</string>
+    <string name="coef_3">3.83</string>
+    <string name="coef_4">1.9</string>
+    <string name="coef_5">3.5</string>
+    <string name="coef_6">2.9</string>
+    <string name="coef_7">2.0</string>
+    <string name="coef_8">1.2</string>
 
 </resources>
