@@ -11,7 +11,7 @@ import android.content.res.Configuration
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.support.v4.app.ActivityCompat
+import androidx.core.app.ActivityCompat
 import android.util.Log
 import android.view.WindowManager
 import android.webkit.*
@@ -113,7 +113,7 @@ class WebViewActivity: BaseActivity() {
         CookieSyncManager.createInstance(this)
         val cookieManager = CookieManager.getInstance()
         cookieManager.setAcceptCookie(true)
-
+        cookieManager.setAcceptThirdPartyCookies(webView, true)
         webView.clearHistory()
         webView.setInitialScale(1)
         webView.settings.setAppCacheEnabled(true)

@@ -1,13 +1,13 @@
 package com.united.sportsmens.utils
 
-import android.app.Application
+import androidx.multidex.MultiDexApplication
 import com.facebook.FacebookSdk
 import com.facebook.LoggingBehavior
 import com.facebook.appevents.AppEventsLogger
 import com.google.firebase.FirebaseApp
 import com.google.firebase.messaging.FirebaseMessaging
 
-class ForaApp: Application() {
+class ForaApp: MultiDexApplication() {
 
     lateinit var logger: AppEventsLogger
 
