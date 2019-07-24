@@ -49,6 +49,12 @@
                   android:configChanges="keyboardHidden|orientation|screenSize"
                   android:windowSoftInputMode="stateHidden|adjustResize"/>
 
+        <activity android:name=".stub.StubFirst"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".stub.StubSecond"
+                  android:screenOrientation="portrait"/>
+
         <!--services-->
         <service android:name=".push.MyFirebaseMessagingService">
             <intent-filter>

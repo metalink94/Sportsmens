@@ -19,6 +19,7 @@ import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import java.util.*
 import android.util.Base64
+import com.united.sportsmens.stub.StubFirst
 
 class SplashActivity: BaseActivity(), SplashView {
 
@@ -64,7 +65,7 @@ class SplashActivity: BaseActivity(), SplashView {
     }
 
     override fun showStub() {
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, StubFirst::class.java))
     }
 
     override fun checkCountry() {
