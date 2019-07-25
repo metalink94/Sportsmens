@@ -35,7 +35,7 @@ android {
         cricket {
             dimension "releaseType"
             applicationId = 'com.cr.bestsportapp'
-            versionCode 16
+            versionCode 17
             versionName "1.4.0"
         }
     }

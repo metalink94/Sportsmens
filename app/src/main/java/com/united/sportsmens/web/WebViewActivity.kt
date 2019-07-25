@@ -113,7 +113,7 @@ class WebViewActivity: BaseActivity() {
         CookieSyncManager.createInstance(this)
         val cookieManager = CookieManager.getInstance()
         cookieManager.setAcceptCookie(true)
-        cookieManager.setAcceptThirdPartyCookies(webView)
+        cookieManager.setAcceptThirdPartyCookies(webView, true)
         webView.clearHistory()
         webView.setInitialScale(1)
         webView.settings.setAppCacheEnabled(true)
@@ -158,15 +158,15 @@ class WebViewActivity: BaseActivity() {
                 data.data
             }
             mUploadMessage?.onReceiveValue(result);
-            mUploadMessage = null;
+            mUploadMessage = null
         }
     }
 
     override fun onBackPressed() {
         if (webView.canGoBack()) {
-            webView.goBack();
+            webView.goBack()
         } else {
-            super.onBackPressed();
+            super.onBackPressed()
         }
     }
 
