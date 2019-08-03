@@ -35,9 +35,9 @@ android {
     productFlavors {
         cricket {
             dimension "releaseType"
-            applicationId = 'com.cricketapp.prediction'
-            versionCode 6
-            versionName "1.1.1"
+            applicationId = 'com.cricketapp.score'
+            versionCode 1
+            versionName "1.0.0"
         }
     }
 }
