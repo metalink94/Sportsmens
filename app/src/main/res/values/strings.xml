@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Cricket - top score</string>
+    <string name="app_name">Cricket - high score</string>
 
     <string name="default_notification_channel_id">fcm_default_channel</string>
     <string name="url">https://4rabet.com/</string>
-    <string name="facebook_app_id">503302290415168</string>
+    <string name="facebook_app_id">466460763755011</string>
 
     <string name="key_first">url</string>
     <string name="key_two">stub</string>
