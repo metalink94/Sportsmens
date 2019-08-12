@@ -1,40 +1,40 @@
 <resources>
-    <string name="app_name">Cricket - high score</string>
+    <string name="app_name">Cricket - top predictions</string>
 
     <string name="default_notification_channel_id">fcm_default_channel</string>
     <string name="url">https://4rabet.com/</string>
-    <string name="facebook_app_id">466460763755011</string>
+    <string name="facebook_app_id">492377834854885</string>
 
     <string name="key_first">url</string>
     <string name="key_two">stub</string>
     <string name="key_country">countries</string>
 
-    <string name="india">Republic of Ireland</string>
-    <string name="score_1">Score: 183-283\n14.07.2019\n12:10</string>
-    <string name="bangladesh">Zimbabwe</string>
-    <string name="description_1">Double Chance: 1.34 и 1.5 \nDraw: Yes 3.94 и No 1.5 \nEven/Odd: Yes 1.26 и No 4.02
+    <string name="india">Pakistan</string>
+    <string name="score_1">Score: 183-184\n05.07.2019\n09:30</string>
+    <string name="bangladesh">Bangladesh</string>
+    <string name="description_1">Double Chance: 1.34 и 1.8 \nDraw: Yes 3.94 и No 2.5 \nEven/Odd: Yes 1.26 и No 2.02
     </string>
-    <string name="australlia">England</string>
-    <string name="sri_lanka">Republic of Ireland</string>
-    <string name="score_2">Score: 0-0\n13.07.2019\n17:10</string>
-    <string name="description_2">Double Chance: 1.94 и 1.5 \nDraw: Yes 1.94 и No 2.5 \nEven/Odd: Yes 2.26 и No 1.82
+    <string name="australlia">Australia</string>
+    <string name="sri_lanka">South Africa</string>
+    <string name="score_2">Score: 0-0\n05.07.2019\n17:10</string>
+    <string name="description_2">Double Chance: 2.94 и 1.5 \nDraw: Yes 2.94 и No 2.5 \nEven/Odd: Yes 2.26 и No 1.82
     </string>
-    <string name="england">Durham County</string>
-    <string name="afganistan">Worcestershire</string>
-    <string name="score_3">Score: 448-668\n10.07.2019\n22:30</string>
-    <string name="description_3">Double Chance: 2.94 и 1.5\nDraw: Yes 2.94 и No 1.9\nEven/Odd: Yes 2.26 и No 1.82
+    <string name="england">England (Women)</string>
+    <string name="afganistan">Australia (Women)</string>
+    <string name="score_3">Score: 448-668\n06.06.2019\n22:30</string>
+    <string name="description_3">Double Chance: 1.4 и 2.5\nDraw: Yes 1.14 и No 2.1\nEven/Odd: Yes 2.26 и No 1.12
     </string>
-    <string name="sri_lanka2">Lancashire Lightning</string>
-    <string name="south_africa">Sussex Sharks</string>
-    <string name="score_4">Score: 0-0\n16.07.2019\n10:30</string>
+    <string name="sri_lanka2">Republic of Ireland</string>
+    <string name="south_africa">Zimbabwe</string>
+    <string name="score_4">Score: 0-0\n07.07.2019\n10:30</string>
     <string name="description_4">Double Chance: 1.4 и 1.9\nDraw: Yes 2.02 и No 1.5\nEven/Odd: Yes 1.26 и No 1.82
     </string>
-    <string name="coef_1">1.83</string>
+    <string name="coef_1">2.83</string>
     <string name="coef_2">1.42</string>
-    <string name="coef_3">3.83</string>
-    <string name="coef_4">1.9</string>
-    <string name="coef_5">1.5</string>
-    <string name="coef_6">1.9</string>
+    <string name="coef_3">1.33</string>
+    <string name="coef_4">2.9</string>
+    <string name="coef_5">2.5</string>
+    <string name="coef_6">1.2</string>
     <string name="coef_7">2.0</string>
     <string name="coef_8">1.2</string>
 
