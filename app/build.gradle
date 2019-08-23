@@ -35,8 +35,8 @@ android {
         cricket {
             dimension "releaseType"
             applicationId = 'com.cricketapp.news'
-            versionCode 8
-            versionName "1.2.1"
+            versionCode 18
+            versionName "1.3.0"
         }
     }
 }
