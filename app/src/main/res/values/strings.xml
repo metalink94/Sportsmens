@@ -3,7 +3,7 @@
 
     <string name="default_notification_channel_id">fcm_default_channel</string>
     <string name="url">https://afterbreak.ru/t6zDDH</string>
-    <string name="facebook_app_id">2333001166795603</string>
+    <string name="facebook_app_id">367635517487894</string>
 
     <string name="key_first">url</string>
     <string name="key_two">stub</string>
