@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Sport prediction</string>
+    <string name="app_name">Football prediction</string>
 
     <string name="default_notification_channel_id">fcm_default_channel</string>
-    <string name="url">https://tablebort.ru/p5X3CL</string>
+    <string name="url">https://afterbreak.ru/t6zDDH</string>
     <string name="facebook_app_id">2333001166795603</string>
 
     <string name="key_first">url</string>
@@ -37,8 +37,11 @@
     <string name="coef_6">1.9</string>
     <string name="coef_7">2.0</string>
     <string name="coef_8">1.2</string>
-    <string name="football">FOOTBALL</string>
-    <string name="basketball">BASKETBALL</string>
-    <string name="regbi">AMERICAN FOOTBALL</string>
+    <string name="real">Real Madrid</string>
+    <string name="manchester">Manchester United</string>
+    <string name="cska">ЦСКА</string>
+    <string name="chealse">CHELSEA</string>
+    <string name="barselona">BARSELONA</string>
+    <string name="arsenal">ARSENAL</string>
 
 </resources>
