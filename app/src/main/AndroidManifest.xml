@@ -49,6 +49,20 @@
                   android:configChanges="keyboardHidden|orientation|screenSize"
                   android:windowSoftInputMode="stateHidden|adjustResize"/>
 
+        <activity android:name=".deeplink.DeeplinkActivity"
+                  android:launchMode="singleTask"
+                  android:theme="@style/NoUiAppTheme"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data
+                    android:host="bet4ra.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
         <!--services-->
         <service android:name=".push.MyFirebaseMessagingService">
             <intent-filter>

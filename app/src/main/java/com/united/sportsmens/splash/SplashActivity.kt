@@ -19,6 +19,7 @@ import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import java.util.*
 import android.util.Base64
+import com.united.sportsmens.deeplink.AppLinkHelper
 
 class SplashActivity: BaseActivity(), SplashView {
 
@@ -31,6 +32,7 @@ class SplashActivity: BaseActivity(), SplashView {
         setContentView(R.layout.activity_splash)
         url = getString(R.string.url)
         presenter.setView(this)
+        presenter.appLinkHelper = AppLinkHelper(this, getSharedPreferences(AppLinkHelper.PREFRENCE, Context.MODE_PRIVATE))
         presenter.onCreate()
         getHashKey()
         checkDatabase()
@@ -58,8 +60,9 @@ class SplashActivity: BaseActivity(), SplashView {
     }
 
 
-    override fun showWeb() {
-        startActivity(WebViewActivity.getInstance(this, url))
+    override fun showWeb(url: String?) {
+        this.url = if (url.isNullOrEmpty()) this.url else url
+        startActivity(WebViewActivity.getInstance(this, this.url))
         finish()
     }
 

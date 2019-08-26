@@ -1,6 +1,7 @@
 package com.united.sportsmens.splash
 
 import com.united.sportsmens.Features
+import com.united.sportsmens.deeplink.AppLinkHelper
 import com.united.sportsmens.utils.mvp.ViewPresenter
 
 class SplashPresenter: ViewPresenter<SplashView>() {
@@ -9,6 +10,8 @@ class SplashPresenter: ViewPresenter<SplashView>() {
     var isNeedStub: Boolean = true
     var countryDatabaseIso: String? = Features.COUNTRY_ISO_CODE
     var inCorrectCountry = false
+    lateinit var appLinkHelper: AppLinkHelper
+
     private var list: MutableList<String> = mutableListOf()
 
     fun checkIp() {
@@ -28,9 +31,17 @@ class SplashPresenter: ViewPresenter<SplashView>() {
 
     private fun showNeededScreen() {
         if (!isNeedStub && inCorrectCountry) {
-            getView()?.showWeb()
+            getView()?.showWeb(getAppLinkUrl())
         } else {
             getView()?.showStub()
+        }
+    }
+
+    private fun getAppLinkUrl(): String? {
+        return if (appLinkHelper.isFromDeepLink()) {
+            appLinkHelper.getAppLinkUrl()
+        } else {
+            null
         }
     }
 

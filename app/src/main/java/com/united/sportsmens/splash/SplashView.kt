@@ -4,6 +4,6 @@ import com.united.sportsmens.utils.mvp.IView
 
 interface SplashView: IView {
     fun showStub()
-    fun showWeb()
+    fun showWeb(url: String? = null)
     fun checkCountry()
 }
