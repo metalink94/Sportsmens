@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Cricket tips - news everyday</string>
+    <string name="app_name">Cricket - info 365 days</string>
 
     <string name="default_notification_channel_id">fcm_default_channel</string>
     <string name="url">https://bet4ra.com/go.php?id=1200</string>
