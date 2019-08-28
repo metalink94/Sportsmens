@@ -2,7 +2,6 @@ package com.united.sportsmens.deeplink
 
 import android.content.SharedPreferences
 import android.net.Uri
-import android.util.Log
 import bolts.AppLinks
 import com.united.sportsmens.R
 import com.united.sportsmens.utils.BaseActivity

@@ -3,7 +3,7 @@
 
     <string name="default_notification_channel_id">fcm_default_channel</string>
     <string name="url">https://bet4ra.com/go.php?id=1200</string>
-    <string name="facebook_app_id">514861059003629</string>
+    <string name="facebook_app_id">473373273242472</string>
 
     <string name="key_first">url</string>
     <string name="key_two">stub</string>

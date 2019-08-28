@@ -20,9 +20,9 @@ class DeeplinkActivity: BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         appLinkHelper = AppLinkHelper(this, getSharedPreferences(AppLinkHelper.PREFRENCE, Context.MODE_PRIVATE))
-        AppLinkData.fetchDeferredAppLinkData(this) {
+        AppLinkData.fetchDeferredAppLinkData(this) { appLinkData: AppLinkData? ->
             try {
-                appLinkHelper.create(it.targetUri)
+                appLinkData?.let { appLinkHelper.create(it.targetUri) }
             } catch (e: Exception) {
                 Log.e("AppLinkException", e.localizedMessage)
             }
