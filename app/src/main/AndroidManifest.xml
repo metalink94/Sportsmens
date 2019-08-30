@@ -42,7 +42,7 @@
         <activity android:name=".menu.MainActivity"
                   android:screenOrientation="portrait"/>
 
-        <activity android:name=".menu.StubActivity"
+        <activity android:name=".stub.StubActivity"
                   android:screenOrientation="portrait"/>
 
         <activity android:name=".menu.DetailActivity"
@@ -51,6 +51,12 @@
         <activity android:name=".web.WebViewActivity"
                   android:configChanges="keyboardHidden|orientation|screenSize"
                   android:windowSoftInputMode="stateHidden|adjustResize"/>
+
+        <activity android:name=".stub.DetailStubView"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".stub.TeamDetailActivity"
+                  android:screenOrientation="portrait"/>
 
         <!--services-->
         <service android:name=".push.MyFirebaseMessagingService">

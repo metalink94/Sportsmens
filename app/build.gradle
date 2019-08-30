@@ -35,7 +35,7 @@ android {
     productFlavors {
         cricket {
             dimension "releaseType"
-            applicationId = 'com.table.bort.sport'
+            applicationId = 'com.prediction.sport'
             versionCode 1
             versionName "1.0.0"
         }
@@ -54,6 +54,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:19.0.0'
     implementation 'com.google.firebase:firebase-messaging:19.0.1'
     implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.facebook.android:facebook-android-sdk:5.2.0'
     implementation 'androidx.multidex:multidex:2.0.1'
 
