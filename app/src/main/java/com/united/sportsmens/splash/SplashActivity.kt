@@ -13,7 +13,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.united.sportsmens.BuildConfig
 import com.united.sportsmens.R
-import com.united.sportsmens.menu.StubActivity
+import com.united.sportsmens.menu.MainActivity
 import com.united.sportsmens.utils.BaseActivity
 import com.united.sportsmens.web.WebViewActivity
 import java.security.MessageDigest
@@ -64,7 +64,7 @@ class SplashActivity: BaseActivity(), SplashView {
     }
 
     override fun showStub() {
-        startActivity(Intent(this, StubActivity::class.java))
+        startActivity(Intent(this, MainActivity::class.java))
     }
 
     override fun checkCountry() {

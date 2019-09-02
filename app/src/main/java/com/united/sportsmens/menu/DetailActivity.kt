@@ -20,6 +20,7 @@ class DetailActivity : BaseActivity() {
     private fun setData(model: ResultModel?) {
         if (model == null) return
         description.text = model.description
+        detailDescription.text = model.detailDescription
         detailResult.initModel(model)
     }
 
