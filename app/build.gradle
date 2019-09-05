@@ -36,8 +36,8 @@ android {
         cricket {
             dimension "releaseType"
             applicationId = 'com.crickettop.new'
-            versionCode 16
-            versionName "1.1.1"
+            versionCode 18
+            versionName "1.2.0"
         }
     }
 }
