@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sport - tips prediction</string>
+    <string name="app_name">Sport - tips predictions</string>
 
     <string name="default_notification_channel_id">fcm_default_channel</string>
     <string name="url">https://tablebort.ru/p5X3CL</string>
