@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addThirdRow() {
-        val teamLeft = Team(R.drawable.ic_5, getString(R.string.england), getString(R.string.coef_5))
+        val teamLeft = Team(R.drawable.ic_4, getString(R.string.england), getString(R.string.coef_5))
         val teamRight = Team(R.drawable.ic_6, getString(R.string.afganistan), getString(R.string.coef_6))
         val thirdResult = ResultModel(teamLeft, getString(R.string.score_3),
             teamRight, getString(R.string.description_3), getString(R.string.detail_descr_3))
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun addSecondRow() {
         val teamLeft = Team(R.drawable.ic_3, getString(R.string.australlia), getString(R.string.coef_3))
-        val teamRight = Team(R.drawable.ic_4, getString(R.string.sri_lanka), getString(R.string.coef_4))
+        val teamRight = Team(R.drawable.ic_5, getString(R.string.sri_lanka), getString(R.string.coef_4))
         val secondResult = ResultModel(teamLeft, getString(R.string.score_2),
             teamRight, getString(R.string.description_2), getString(R.string.detail_descr_2))
         second.initModel(secondResult)
@@ -50,8 +50,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addFirstRow() {
-        val teamLeft = Team(R.drawable.ic_1, getString(R.string.india), getString(R.string.coef_1))
-        val teamRight = Team(R.drawable.ic_2, getString(R.string.bangladesh), getString(R.string.coef_2))
+        val teamLeft = Team(R.drawable.ic_2, getString(R.string.india), getString(R.string.coef_1))
+        val teamRight = Team(R.drawable.ic_1, getString(R.string.bangladesh), getString(R.string.coef_2))
         val firstResult = ResultModel(teamLeft, getString(R.string.score_1),
             teamRight, getString(R.string.description_1), getString(R.string.detail_descr_1))
         first.initModel(firstResult)

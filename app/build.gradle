@@ -35,7 +35,7 @@ android {
     productFlavors {
         cricket {
             dimension "releaseType"
-            applicationId = 'com.predicition.football'
+            applicationId = 'com.football.predictions'
             versionCode 1
             versionName "1.0.0"
         }
@@ -50,9 +50,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'com.google.firebase:firebase-core:17.1.0'
-    implementation 'com.google.firebase:firebase-database:19.0.0'
-    implementation 'com.google.firebase:firebase-messaging:19.0.1'
+    implementation 'com.google.firebase:firebase-core:17.2.0'
+    implementation 'com.google.firebase:firebase-database:19.1.0'
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.facebook.android:facebook-android-sdk:5.2.0'
     implementation 'androidx.multidex:multidex:2.0.1'
